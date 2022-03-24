@@ -19,7 +19,7 @@ namespace Insert_data_apotek
                 con = new SqlConnection("data source=DESKTOP-8VLH0CG;database=apotek;Integrated Security = TRUE");
                 con.Open();
 
-                SqlCommand cm = new SqlCommand("insert into test (NIM, Nama, Alamat, Jenis_Kelamin) values('2019010092','Uung','Cilegon','L')", con);
+                SqlCommand cm = new SqlCommand("insert into ProdiTI (NIM, Nama, Alamat, Jenis_Kelamin) values('20200140073','Zahran Rafif','Cilegon','L')", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Sukses menambahkan data");
