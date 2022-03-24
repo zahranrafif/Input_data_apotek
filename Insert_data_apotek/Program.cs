@@ -35,5 +35,6 @@ namespace Insert_data_apotek
                 con.Close();
             }
         }
+        
     }
 }
