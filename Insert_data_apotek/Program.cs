@@ -18,8 +18,23 @@ namespace Insert_data_apotek
             {
                 con = new SqlConnection("data source=DESKTOP-8VLH0CG;database=apotek;Integrated Security = TRUE");
                 con.Open();
+                
+                //Insert Data
 
-                SqlCommand cm = new SqlCommand("insert into ProdiTI (NIM, Nama, Alamat, Jenis_Kelamin) values('20200140073','Zahran Rafif','Cilegon','L')", con);
+                SqlCommand cm = new SqlCommand("insert into Customer (Id_customer, Nama, Alamat, Jenis_Kelamin, Pekerjaan) values" +
+                    "(77886,'Zahran','Jl.Muncang','L','Mahasiswa')," +
+                    "(77887,'Gugung','Jl.Utara','L','Buruh')," +
+                    "(77888,'Rijal','Jl.Selatan','L','Buruh')" +
+                    
+                    "insert into Karyawan (Id_karyawan, Nama, Alamat, Agama, Telpon) values" +
+                    "(1196,'Zidhan','Jl.Cisait','Islam',896515976)," +
+                    "(1197,'Bagas','Jl.Tempel','Islam',896515977)" +
+                    
+                    "insert into Obat (Id_obat, Nama_obat, Jenis, Harga, Stock, Id_supplier) values" +
+                    "(22336,'Kombatrin','Cair',60000,6,11996)," +
+                    "(22337,'Antangin','Cair',20000,2,11997)", con);
+
+
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Sukses menambahkan data");
