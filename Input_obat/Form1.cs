@@ -36,13 +36,11 @@ namespace Input_obat
             /*SqlCommand cm = new SqlCommand("insert into test (NIM, Nama, Alamat, Jenis_Kelamin) values('2019010092','Uung','Cilegon','L')", con);
             cm.ExecuteNonQuery();*/
 
-            String sSql = "insert into input_obat(obat, stock, harga)values('" + obat.Text + "','" + stock.Text + "','" + harga.Text + "')";
+            String sSql = "insert into input_obat(obat, stock, harga, jenis)values('" + obat.Text + "','" + stock.Text + "','" + harga.Text + "','" + jenis.Text +"')";
             cmd = new SqlCommand(sSql, conn);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data berhasil disimpan bro!");
             conn.Close();
         }
-
-       
     }
 }
