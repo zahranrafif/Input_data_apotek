@@ -19,7 +19,7 @@ namespace Insert_data_apotek
                 con = new SqlConnection("data source=DESKTOP-8VLH0CG;database=apotek;Integrated Security = TRUE");
                 con.Open();
                 
-                //Insert Data
+                //Nambahin Data lewat Visual Studio
 
                 SqlCommand cm = new SqlCommand("insert into Customer (Id_customer, Nama, Alamat, Jenis_Kelamin, Pekerjaan) values" +
                     "(77886,'Zahran','Jl.Muncang','L','Mahasiswa')," +
